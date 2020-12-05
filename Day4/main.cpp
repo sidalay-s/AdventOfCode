@@ -21,7 +21,6 @@ int main()
     std::ifstream BatchFile {"credentials.txt"};
     std::vector <std::string> Credentials;
 
-
     GetCredentials(Credentials, BatchFile);
     std::cout << "\nNumber of valid passports: " << PassportScanner(Credentials) << std::endl;
     BatchFile.close();
