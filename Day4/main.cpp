@@ -22,14 +22,15 @@ int main()
     std::vector <std::string> Credentials;
 
     GetCredentials(Credentials, BatchFile);
-    std::cout << "\nNumber of valid passports: " << PassportScanner(Credentials) << std::endl;
+    std::cout << "\nNumber of valid passports: " 
+              << PassportScanner(Credentials) << std::endl;
     BatchFile.close();
 }
 
 void GetCredentials(std::vector <std::string>& Cred, std::ifstream& File)
 {
-    std::string Passports{};  // Stores the filtered KEY IDs and gets stored in the vector 'Cred'
-    std::string LineParser; // Grabs file line to filter KEY IDs
+    std::string Passports{};    // Stores the filtered KEY IDs and gets stored in the vector 'Cred'
+    std::string LineParser;     // Grabs file line to filter KEY IDs
     int IDsize{3};
 
     // Use this loop to store the appropriate credentials & count #of passports
